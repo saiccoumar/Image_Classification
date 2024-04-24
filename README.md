@@ -21,6 +21,12 @@ Our control group for this project are basic resnet18 models trained on our data
 
 Models will be loaded into another file and used to test against perturbed data to see how robust the models are against adversarial attacks. A library of model architectures can be found in model_architectures.py which are imported to our test file, test_perturbations.ipynb.
 
+
+### Adversarial Attacks
+Model architecture for the control ResNet Models can be found in `model_architectures.py`.
+Adversarial Attacks can be found in `attacks.py`.
+Tests of the adversarial attacks can be found in `test_perturbations.ipynb`.
+
 ## Job Scripts
 ### Using SLURM:
 If the environment hasn't been configured yet, the setup script will create our conda environment on the SLURM GPU account. This only needs to be done once. Use command:
@@ -63,12 +69,6 @@ python -u <python file>.py
 
 To make sure your stdout is going to a file, adjust the ```#SBATCH --output=/your/desirable/directory  ```
 Before you run your command, make sure to change your directory back to your current working directory (directory is changed when you load anaconda, and it wont be able to find your file if you don't change it back  )
-
-### Adversarial Attacks
-Model architecture for the control ResNet Models can be found in `model_architectures.py`.
-Adversarial Attacks can be found in `attacks.py`.
-Tests of the adversarial attacks can be found in `test_perturbations.ipynb`.
-
 
 #### Directory Structure:
 ```
