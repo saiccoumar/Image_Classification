@@ -1,0 +1,27 @@
+Adversarial Attacks and Defences Competition
+https://arxiv.org/pdf/1804.00097.pdf
+
+Fast Gradient Sign Attack:
+https://arxiv.org/abs/1412.6572
+https://pytorch.org/tutorials/beginner/fgsm_tutorial.html
+
+DeepFool:
+https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Moosavi-Dezfooli_DeepFool_A_Simple_CVPR_2016_paper.pdf
+https://github.com/LTS4/DeepFool/blob/master/Python/deepfool.py
+
+PGD:
+https://arxiv.org/pdf/1706.06083.pdf
+
+NES: 
+https://arxiv.org/pdf/1804.08598.pdf
+
+CW:
+https://arxiv.org/pdf/1608.04644
+
+JSMA:
+https://arxiv.org/pdf/2007.06032.pdf
+
+SA: 
+https://arxiv.org/pdf/1912.00049.pdf
+
+Adversarial Robustness: https://arxiv.org/pdf/2203.12709.pdf
