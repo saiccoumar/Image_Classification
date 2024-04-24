@@ -42,6 +42,33 @@ To cancel a job, use command:
 scancel <job-id>
 ```
 
+### Create a job.sh Script:
+The shebang for a bash script is first set. After, we use #SBATCH comments to set out sbatch parameters. sbatch preprocesses these while running the job script so we don't need to manually input all of these (and they're ignored when run locally). Module purge is done to cleanse the previous module and reload with the correct modules.
+Before running any conda command remember to load the module: 
+```
+module load anaconda
+```
+first set up your conda environment. In the sample job file, the conda environment is called "d22env."  
+
+The following command in setup_env.sh is used to create the environment. Modify it with packages you may need.
+```
+conda create --name MyEnvName python=3.8 pytorch torchvision matplotlib pandas <Any other packages you might need> -y  
+```
+
+After all dependencies are loaded, we run our desired file:
+```
+python -u <python file>.py
+```
+
+To make sure your stdout is going to a file, adjust the ```#SBATCH --output=/your/desirable/directory  ```
+Before you run your command, make sure to change your directory back to your current working directory (directory is changed when you load anaconda, and it wont be able to find your file if you don't change it back  )
+
+### Adversarial Attacks
+Model architecture for the control ResNet Models can be found in `model_architectures.py`.
+Adversarial Attacks can be found in `attacks.py`.
+Tests of the adversarial attacks can be found in `test_perturbations.ipynb`.
+
+
 #### Directory Structure:
 ```
 src:
@@ -180,28 +207,3 @@ C:.
         svhn_summary_statistics.txt
 ```
 
-### Create a job.sh Script:
-The shebang for a bash script is first set. After, we use #SBATCH comments to set out sbatch parameters. sbatch preprocesses these while running the job script so we don't need to manually input all of these (and they're ignored when run locally). Module purge is done to cleanse the previous module and reload with the correct modules.
-Before running any conda command remember to load the module: 
-```
-module load anaconda
-```
-first set up your conda environment. In the sample job file, the conda environment is called "d22env."  
-
-The following command in setup_env.sh is used to create the environment. Modify it with packages you may need.
-```
-conda create --name MyEnvName python=3.8 pytorch torchvision matplotlib pandas <Any other packages you might need> -y  
-```
-
-After all dependencies are loaded, we run our desired file:
-```
-python -u <python file>.py
-```
-
-To make sure your stdout is going to a file, adjust the ```#SBATCH --output=/your/desirable/directory  ```
-Before you run your command, make sure to change your directory back to your current working directory (directory is changed when you load anaconda, and it wont be able to find your file if you don't change it back  )
-
-### Adversarial Attacks
-Model architecture for the control ResNet Models can be found in `model_architectures.py`.
-Adversarial Attacks can be found in `attacks.py`.
-Tests of the adversarial attacks can be found in `test_perturbations.ipynb`.
