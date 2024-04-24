@@ -3,8 +3,6 @@
  <img src="https://github.com/RishabhPandey0403/cs490dsc/assets/55699636/43b0705c-e5c8-4bfa-9638-763683be0f26">
 </p>
 
-
-
 ## Datasets:
 The datasets used are MNIST, CIFAR10, and SVHN. They can be found in the following links. 
 
@@ -13,76 +11,6 @@ MNIST: https://git-disl.github.io/GTDLBench/datasets/mnist_datasets/
 CIFAR10: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 
 SVHN: http://ufldl.stanford.edu/housenumbers/ 
-
-#### Directory Structure:
-```
-src:
-C:.
-│   attacks.py
-│   literature
-│   model_architectures.py
-│   test_perturbations.ipynb
-│
-├───artifacts
-│       resnet18_cifar_model.pth
-│       resnet18_mnist_model.pth
-│       resnet18_svhn_model.pth
-│
-├───CIFAR-10
-│   │   batches.meta
-│   │   cifar-10-python.tar.gz
-│   │   data_batch_1
-│   │   data_batch_2
-│   │   data_batch_3
-│   │   data_batch_4
-│   │   data_batch_5
-│   │   readme.html
-│   │   test_batch
-│   │
-│   └───cifar-10-batches-py
-│           batches.meta
-│           data_batch_1
-│           data_batch_2
-│           data_batch_3
-│           data_batch_4
-│           data_batch_5
-│           readme.html
-│           test_batch
-│
-├───images
-│       resnet18ex1.png
-│       resnet18ex2.png
-│
-├───MNIST_CSV
-│       generate_mnist_csv.py
-│       mnist_test.csv
-│       mnist_train.csv
-│       readme.md
-│
-├───Reports
-│       Business Understanding.pdf
-│       Data Understanding Report.pdf
-│
-├───resnet_models
-│       cifar10_resnet18.ipynb
-│       grid_search.py
-│       mnist_resnet18.ipynb
-│       svhn_resnet18.ipynb
-│       test_resnet_from_pytorch.ipynb
-│
-├───Summary_Statistics
-│       cifar-10_summary_statistics.ipynb
-│       cifar10_summary_statistics.txt
-│       mnist_summary_statistics.ipynb
-│       mnist_summary_statistics.txt
-│       svhn_summary_statistics.ipynb
-│       svhn_summary_statistics.txt
-│
-├───SVHN
-│       extra_32x32.mat
-│       test_32x32.mat
-│       train_32x32.mat
-```
 
 ### Summary Statistics:
 Brief summary statistics have been created for each dataset in their respective ipynb files. These notebooks include metadata, data transformation (one-hot vectors to human interpretable images), class balance, PCA dimensionality reduction, "mean" images, and traditional summary statistics on the euclidean distance from the mean image and records. The latter was outputted to separate text files.
@@ -112,6 +40,144 @@ ssqueue -u  <your-username>
 To cancel a job, use command:
 ```
 scancel <job-id>
+```
+
+#### Directory Structure:
+```
+src:
+C:.
+├───CIFAR-10
+│   │   batches.meta
+│   │   cifar-10-python.tar.gz
+│   │   data_batch_1
+│   │   data_batch_2
+│   │   data_batch_3
+│   │   data_batch_4
+│   │   data_batch_5
+│   │   readme.html
+│   └───test_batch
+├───MNIST_CSV
+│       generate_mnist_csv.py
+│       mnist_test.csv
+│       mnist_train.csv
+│       readme.md
+├───SVHN
+│       extra_32x32.mat
+│       test_32x32.mat
+│       train_32x32.mat
+│   attacks.py
+│   curate_datasets.ipynb
+│   data_curator.py
+│   download_data.py
+│   literature
+│   model_architectures.py
+│   test_cw.ipynb
+│   test_deepfool.ipynb
+│   test_fgsm.ipynb
+│   test_jsma.ipynb
+│   test_nes.ipynb
+│   test_perturbations.ipynb
+│   test_pgd.ipynb
+│   test_square.ipynb
+│
+├───.VSCodeCounter
+│   ├───2024-03-07_01-42-36
+│   │       details.md
+│   │       diff-details.md
+│   │       diff.csv
+│   │       diff.md
+│   │       diff.txt
+│   │       results.csv
+│   │       results.json
+│   │       results.md
+│   │       results.txt
+│   │
+│   └───2024-03-07_01-43-45
+│           details.md
+│           diff-details.md
+│           diff.csv
+│           diff.md
+│           diff.txt
+│           results.csv
+│           results.json
+│           results.md
+│           results.txt
+│
+├───artifacts
+│       cw_augmented_resnet18_cifar_model.pth
+│       cw_augmented_resnet18_mnist_model.pth
+│       cw_augmented_resnet18_svhn_model.pth
+│       deepfool_augmented_resnet18_cifar_model.pth
+│       deepfool_augmented_resnet18_mnist_model.pth
+│       deepfool_augmented_resnet18_svhn_model.pth
+│       fgsm_augmented_resnet18_cifar_model.pth
+│       fgsm_augmented_resnet18_mnist_model.pth
+│       fgsm_augmented_resnet18_svhn_model.pth
+│       fully_augmented_resnet18_cifar_model.pth
+│       fully_augmented_resnet18_mnist_model.pth
+│       fully_augmented_resnet18_svhn_model.pth
+│       jsma_augmented_resnet18_cifar_model.pth
+│       jsma_augmented_resnet18_mnist_model.pth
+│       jsma_augmented_resnet18_svhn_model.pth
+│       pgd_augmented_resnet18_cifar_model.pth
+│       pgd_augmented_resnet18_mnist_model.pth
+│       pgd_augmented_resnet18_svhn_model.pth
+│       resnet18_cifar_model.pth
+│       resnet18_mnist_model.pth
+│       resnet18_svhn_model.pth
+│
+├───augmented_data
+│       cw_cifar10_augmented_data.h5
+│       cw_mnist_augmented_data.h5
+│       cw_svhn_augmented_data.h5
+│       deepfool_cifar10_augmented_data.h5
+│       deepfool_mnist_augmented_data.h5
+│       deepfool_svhn_augmented_data.h5
+│       fgsm_cifar10_augmented_data.h5
+│       fgsm_mnist_augmented_data.h5
+│       fgsm_svhn_augmented_data.h5
+│       jsma_cifar10_augmented_data.h5
+│       jsma_mnist_augmented_data.h5
+│       jsma_svhn_augmented_data.h5
+│       pgd_cifar10_augmented_data.h5
+│       pgd_mnist_augmented_data.h5
+│       pgd_svhn_augmented_data.h5
+│
+├───images
+│       resnet18ex1.png
+│       resnet18ex2.png
+│
+├───Reports
+│       Business Understanding.pdf
+│       Data Preparation.pdf
+│       Data Set Notes.pdf
+│       Data Understanding Report.pdf
+│       Evaluation Report.pdf
+│       Evaluation Table.pdf
+│       Modeling Report.pdf
+│
+├───resnet_models
+│       cifar10_resnet18.ipynb
+│       grid_search.py
+│       mnist_resnet18.ipynb
+│       svhn_resnet18.ipynb
+│       test_resnet_from_pytorch.ipynb
+│
+├───Slides
+│       CS490 BusinessData Understanding.pptx
+│       CS490 Data Preparation Presentation.pptx
+│       CS490 Evaluation Presentation.pptx
+│       CS490 Modeling Presentation.pptx
+│       CS_490_capstone.pdf
+│       Intro_norm_attacks.pdf
+│
+└───Summary_Statistics
+        cifar-10_summary_statistics.ipynb
+        cifar10_summary_statistics.txt
+        mnist_summary_statistics.ipynb
+        mnist_summary_statistics.txt
+        svhn_summary_statistics.ipynb
+        svhn_summary_statistics.txt
 ```
 
 ### Create a job.sh Script:
