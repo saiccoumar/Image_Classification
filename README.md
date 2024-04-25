@@ -19,13 +19,15 @@ Brief summary statistics have been created for each dataset in their respective 
 ## Models:
 Our control group for this project are basic resnet18 models trained on our datasets. Details about the model can be found within their respective notebooks. in the resnet_models folder. The resnet18 models were recreated using pytorch. GPU acceleration is recommended for training. Models were saved to .pth files which are moved to the artifacts folder. 
 
-Models will be loaded into another file and used to test against perturbed data to see how robust the models are against adversarial attacks. A library of model architectures can be found in model_architectures.py which are imported to our test file, test_perturbations.ipynb.
+Models will be loaded into another file and used to test against perturbed data to see how robust the models are against adversarial attacks. A library of model architectures can be found in model_architectures.py which are imported to our test files.
 
 
 ### Adversarial Attacks
 Model architecture for the control ResNet Models can be found in `model_architectures.py`.
 Adversarial Attacks can be found in `attacks.py`.
-Tests of the adversarial attacks can be found in `test_perturbations.ipynb`.
+Tests of the adversarial attacks can be found in their respective notebooks. For example fgsm is tested in test_fgsm.ipynb. The attacks are not optimized to run in parallel on GPUs as the original sources write their work sequentially, but optimizations can be made easily. 
+
+The structure provides modularity for the project - different neural network architectures can be added and swapped out and tested against each of the attacks. Similarly, different tests can be added using the same formatting and can be compared against each other. 
 
 ## Job Scripts
 ### Using SLURM:
