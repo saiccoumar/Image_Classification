@@ -110,28 +110,6 @@ C:.
 │   test_pgd.ipynb
 │   test_square.ipynb
 │
-├───.VSCodeCounter
-│   ├───2024-03-07_01-42-36
-│   │       details.md
-│   │       diff-details.md
-│   │       diff.csv
-│   │       diff.md
-│   │       diff.txt
-│   │       results.csv
-│   │       results.json
-│   │       results.md
-│   │       results.txt
-│   │
-│   └───2024-03-07_01-43-45
-│           details.md
-│           diff-details.md
-│           diff.csv
-│           diff.md
-│           diff.txt
-│           results.csv
-│           results.json
-│           results.md
-│           results.txt
 │
 ├───artifacts
 │       cw_augmented_resnet18_cifar_model.pth
